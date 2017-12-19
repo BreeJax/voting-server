@@ -15,11 +15,6 @@ describe("immutability", () => {
       expect(state).to.equal(43)
     })
   })
-})
-
-describe("immutability", () => {
-  // ...
-
   describe("A List", () => {
     function addMovie(currentState, movie) {
       return currentState.push(movie)
@@ -33,11 +28,6 @@ describe("immutability", () => {
       expect(state).to.equal(List.of("Trainspotting", "28 Days Later"))
     })
   })
-})
-
-describe("immutability", () => {
-  // ...
-
   describe("a tree", () => {
     function addMovie(currentState, movie) {
       return currentState.set("movies", currentState.get("movies").push(movie))
@@ -62,7 +52,7 @@ describe("immutability", () => {
     })
   })
 })
+
 function addMovie(currentState, movie) {
   return currentState.update("movies", movies => movies.push(movie))
 }
-
